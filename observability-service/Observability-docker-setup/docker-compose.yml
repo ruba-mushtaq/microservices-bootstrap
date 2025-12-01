@@ -1,0 +1,75 @@
+services:
+  prometheus:
+    image: prom/prometheus
+    container_name: prometheuss
+    volumes:
+      - ./prometheus-local.yml:/etc/prometheus/prometheus.yml:ro
+      - prometheus_data:/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+    ports:
+      - '9090:9090'
+    restart: unless-stopped
+
+  loki:
+    image: grafana/loki:2.9.2
+    container_name: loki
+    volumes:
+      - ./loki/loki-config.yaml:/etc/loki/local-config.yaml:ro
+      - loki_data:/loki
+    command: -config.file=/etc/loki/local-config.yaml
+    ports:
+      - '3100:3100'
+    restart: unless-stopped
+
+  promtail:
+    image: grafana/promtail:2.9.2
+    container_name: promtail
+    volumes:
+      - /var/log:/var/log:ro
+      - /var/lib/docker/containers:/var/lib/docker/containers:ro
+      - ./promtail/promtail-config.yaml:/etc/promtail/promtail-config.yaml:ro
+    command: -config.file=/etc/promtail/promtail-config.yaml
+    restart: unless-stopped
+
+  tempo:
+    image: grafana/tempo:2.5.0   # FIXED — your old version didn't exist
+    container_name: tempo
+    volumes:
+      - ./tempo/tempo-config.yaml:/etc/tempo.yaml:ro
+      - tempo_data:/var/tempo
+    command: -config.file=/etc/tempo.yaml
+    ports:
+      - '9411:9411'
+      - '3200:3200'
+    restart: unless-stopped
+
+  grafana:
+    image: grafana/grafana     # ✔ NOT CHANGED
+    container_name: grafanaa   # ✔ NOT CHANGED
+    depends_on:
+      - prometheus
+      - loki
+      - tempo
+    volumes:
+      - ./grafana/provisioning:/etc/grafana/provisioning:ro
+      - grafana_data:/var/lib/grafana
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+      - GF_SECURITY_ADMIN_USER=admin
+    ports:
+      - '3000:3000'
+    restart: unless-stopped
+
+  sample-service:
+    build: ./sample-service
+    container_name: sample-service
+    ports:
+      - '8080:8080'
+    restart: unless-stopped
+
+volumes:
+  prometheus_data:
+  loki_data:
+  tempo_data:
+  grafana_data:
