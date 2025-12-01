@@ -12,10 +12,7 @@ This project demonstrates core microservices concepts using:
 - Distributed Tracing (Tempo)
 
 ## Services
-- Auth Service
-- Payment Service
-- Inventory Service
-- API Gateway
+-Monitoring Service with sample service
 
 ## How to Run
 docker-compose up --build
