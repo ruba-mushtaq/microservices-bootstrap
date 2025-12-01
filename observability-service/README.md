@@ -21,7 +21,7 @@ This repo is intended as a portfolio piece demonstrating how to add, run, and vi
 ## Contents
 
 
-- `observability-service/` — the Spring Boot application (move your existing project here)
+- `observability-service/` — the Spring Boot application
 - `docker/` — docker-compose and monitoring configs (Prometheus, Grafana, Tempo)
 - `docs/` — setup guides and metric explanations
 

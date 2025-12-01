@@ -30,3 +30,9 @@ management:
   distribution:
    percentiles-histogram:
     http_server_requests: true
+
+
+How to Run
+1. Clone Repository 
+2. Go to observability-service/Observability-docker-setup
+3. Run docker-compose.yml
