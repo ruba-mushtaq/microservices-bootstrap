@@ -1,4 +1,4 @@
-# E-commerce Platform (Mini)
+# EventDriven Platform
 
 A **microservices-based e-commerce platform** designed for portfolio demonstration.  
 This project showcases **reactive Spring Boot services**, **event-driven architecture with Kafka**, and **service-to-service communication**.
