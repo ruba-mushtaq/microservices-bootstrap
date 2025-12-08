@@ -107,7 +107,7 @@ GET    /inventory
 
 ## Running Locally (STS/Eclipse)
 
-1. **Start Kafka **
+1. **Start Kafka**
 
 ```bash
 docker-compose -f docker-compose-kafka.yml up -d
