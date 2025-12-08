@@ -21,9 +21,9 @@ This repo is intended as a portfolio piece demonstrating how to add, run, and vi
 ## Contents
 
 
-- `observability-service/` — the Spring Boot application
-- `docker/` — docker-compose and monitoring configs (Prometheus, Grafana, Tempo)
-- `docs/` — setup guides and metric explanations
+- `logging-and-observability/sample-service` — the Spring Boot application
+- `logging-and-observability/` — docker-compose and monitoring configs (Prometheus, Grafana, Tempo)
+- `docs/` — explained important links
 
 
 ---
@@ -32,7 +32,7 @@ This repo is intended as a portfolio piece demonstrating how to add, run, and vi
 ## Quick start (developer)
 
 
-1. Move your existing project into `observability-service/` (rename to `observability-service` if necessary).
+1. Move your existing project into `logging-and-observability/` (rename to `logging-and-observability` if necessary).
 2. Make sure the service has Actuator, Micrometer Prometheus registry, and tracing (Micrometer + Tempo) configured.
 3. From repo root, run:
 

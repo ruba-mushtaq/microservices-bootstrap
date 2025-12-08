@@ -127,7 +127,7 @@ docker-compose -f docker-compose-kafka.yml up -d
 
 ## How to Run in Docker
 
-Make sure **Docker** and **Docker Compose** are installed, then run eac:
+Make sure **Docker** and **Docker Compose** are installed, then run :
 
 ```bash
 docker-compose up --build
