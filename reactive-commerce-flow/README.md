@@ -14,15 +14,15 @@ It includes three independent services:
 
 This system follows a clean microservices pattern:
 
--   Each service runs independently\
--   All services connect to reactive H2 database\
--   Order Service communicates with Payment Service\
+-   Each service runs independently
+-   All services connect to reactive H2 database
+-   Order Service communicates with Payment Service
 -   JWT is validated in every request using a WebFlux `WebFilter`
 
 ##  Security (JWT)
 
--   Login route returns a JWT token\
--   Every service validates JWT in a filter\
+-   Login route returns a JWT token
+-   Every service validates JWT in a filter
 -   Unauthorized requests → **401 UNAUTHORIZED**
 
 Example Authorization header:
@@ -53,38 +53,39 @@ Example Authorization header:
 
 ##  Tech Stack
 
--   Java 17\
--   Spring Boot 3 (Reactive WebFlux)\
--   Reactive H2 database\
--   JWT for authentication\
+-   Java 17
+-   Spring Boot 3 (Reactive WebFlux)
+-   Reactive H2 database
+-   JWT for authentication
 -   Project Reactor (Mono / Flux)
 
-##  User Service Endpoints
+## User Service Endpoints
 
-  Method   Endpoint                  Description
-  -------- ------------------------- -----------------------
-  POST      `/auth/register`          Register User
-  POST      `/auth/register`          Login user
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST   | `/auth/register` | Register User |
+| POST   | `/auth/login` | Login user |
 
-##  Order Service Endpoints
+## Order Service Endpoints
 
-  Method   Endpoint                  Description
-  -------- ------------------------- -----------------------
-  GET      `/orders`                 Get all orders
-  GET      `/orders/user/{userId}`   Get orders for a user
-  POST     `/orders`                 Create a new order
-  PATCH    `/orders/{id}`            Update order status
-  
-> All endpoints require a valid JWT.
-
-##  Payment Service Endpoints
-
-  Method   Endpoint                         Description
-  -------- -------------------------        -----------------------
-  POST      `/payments`          	        Update pending order to confirm/paid
-  GET      `/payments/order/{orderId}`      Get order by order id
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET    | `/orders` | Get all orders |
+| GET    | `/orders/user/{userId}` | Get orders for a user |
+| POST   | `/orders` | Create a new order |
+| PATCH  | `/orders/{id}` | Update order status |
 
 > All endpoints require a valid JWT.
+
+## Payment Service Endpoints
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST   | `/payments` | Update pending order to confirm/paid |
+| GET    | `/payments/order/{orderId}` | Get order by order id |
+
+> All endpoints require a valid JWT.
+
 
 ##  Inter-Service Communication
 
@@ -114,7 +115,7 @@ mvn spring-boot:run
 
 ##  Sample Test Flow
 
-### 1️⃣ Get JWT Token (login)
+### Get JWT Token (login)
 
 ``` json
 POST /users/login
