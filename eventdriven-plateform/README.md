@@ -26,7 +26,7 @@ This project showcases **reactive Spring Boot services**, **event-driven archite
 - **Notifications:** Logs events for portfolio demonstration  
 - **Event-driven Architecture:** Uses **Kafka** to communicate between services  
 - **Reactive Programming:** Implemented with **Spring WebFlux** and **R2DBC**  
-- **JWT Authentication:** Optional for securing user requests  
+ 
 
 ---
 
@@ -135,7 +135,7 @@ Each service has a `Dockerfile`. You can optionally run all services and Kafka t
 ## Project Structure
 
 ```
-ecommerce-platform-mini/
+eventdriven-plateform/
 ├── product-service/
 ├── cart-service/
 ├── order-service/
