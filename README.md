@@ -38,7 +38,7 @@ This project demonstrates core **microservices concepts** using modern **Spring 
 
 ## How to Run
 
-Make sure **Docker** and **Docker Compose** are installed, then run eac:
+Make sure **Docker** and **Docker Compose** are installed, then run each service using:
 
 ```bash
 docker-compose up --build

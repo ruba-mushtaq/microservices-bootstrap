@@ -124,11 +124,15 @@ docker-compose -f docker-compose-kafka.yml up -d
 
 - Add product → Add to cart → Place order → Check inventory → Notifications logged  
 
-4. **Test API Flow With Docker**
+
+## How to Run in Docker
+
+Make sure **Docker** and **Docker Compose** are installed, then run eac:
 
 ```bash
 docker-compose up --build
 ```
+
 ---
 
 ## Project Structure
