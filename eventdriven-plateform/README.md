@@ -107,7 +107,7 @@ GET    /inventory
 
 ## Running Locally (STS/Eclipse)
 
-1. **Start Kafka in KRaft mode (no ZooKeeper required)**
+1. **Start Kafka **
 
 ```bash
 docker-compose -f docker-compose-kafka.yml up -d
@@ -124,12 +124,11 @@ docker-compose -f docker-compose-kafka.yml up -d
 
 - Add product → Add to cart → Place order → Check inventory → Notifications logged  
 
----
+4. **Test API Flow With Docker**
 
-## Docker (Optional)
-
-Each service has a `Dockerfile`. You can optionally run all services and Kafka together via Docker Compose for full-stack testing.
-
+```bash
+docker-compose up --build
+```
 ---
 
 ## Project Structure
@@ -146,7 +145,7 @@ eventdriven-plateform/
 
 ---
 
-## Portfolio Showcase
+## Showcase
 
 This project demonstrates:
 
@@ -155,13 +154,6 @@ This project demonstrates:
 - **Event-driven Communication with Kafka**  
 - **End-to-end Service Integration**  
 - **Realistic E-commerce Workflow Simulation**  
-- **JWT Authentication (optional)**  
 
-This is ideal for demonstrating **senior-level design skills** in your GitHub portfolio.
 
----
-
-## Author
-
-**Your Name** – Senior Java Developer | Microservices Enthusiast
 

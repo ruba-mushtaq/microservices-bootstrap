@@ -38,7 +38,13 @@ This project demonstrates core **microservices concepts** using modern **Spring 
 
 ## How to Run
 
-Make sure **Docker** and **Docker Compose** are installed, then run:
+Make sure **Docker** and **Docker Compose** are installed, then run eac:
 
 ```bash
 docker-compose up --build
+```
+---
+
+## Author
+
+**Ruba Mushtaq** – Senior Java Developer | Microservices Enthusiast
