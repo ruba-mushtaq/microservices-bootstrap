@@ -38,5 +38,5 @@ This repo is intended as a portfolio piece demonstrating how to add, run, and vi
 
 
 ```bash
-cd docker
+cd logging-and-observability
 docker compose up --build

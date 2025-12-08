@@ -33,7 +33,7 @@ services:
     restart: unless-stopped
 
   tempo:
-    image: grafana/tempo:2.5.0   # FIXED — your old version didn't exist
+    image: grafana/tempo:2.5.0 
     container_name: tempo
     volumes:
       - ./tempo/tempo-config.yaml:/etc/tempo.yaml:ro
@@ -45,8 +45,8 @@ services:
     restart: unless-stopped
 
   grafana:
-    image: grafana/grafana     # ✔ NOT CHANGED
-    container_name: grafanaa   # ✔ NOT CHANGED
+    image: grafana/grafana     
+    container_name: grafanaa   
     depends_on:
       - prometheus
       - loki
