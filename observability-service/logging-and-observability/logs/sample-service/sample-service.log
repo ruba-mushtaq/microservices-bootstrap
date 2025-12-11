@@ -84,3 +84,16 @@ This is a test log line Thu Dec 11 13:34:45 +04 2025
 2025-12-11 13:31:03 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
 2025-12-11 13:31:03 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
 2025-12-11 13:40:13 [http-nio-8080-exec-8] INFO  com.cobstack.app.DemoApplication - Hello From Root 
+2025-12-11 13:50:37 [main] INFO  com.cobstack.app.DemoApplication - Starting DemoApplication v0.0.1-SNAPSHOT using Java 11.0.29 on e09938d3277c with PID 1 (/app/app.jar started by root in /app)
+2025-12-11 13:50:37 [main] INFO  com.cobstack.app.DemoApplication - No active profile set, falling back to 1 default profile: "default"
+2025-12-11 13:50:37 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-12-11 13:50:37 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-12-11 13:50:37 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.83]
+2025-12-11 13:50:37 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-12-11 13:50:37 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 790 ms
+2025-12-11 13:50:38 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 3 endpoint(s) beneath base path '/actuator'
+2025-12-11 13:50:38 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-12-11 13:50:38 [main] INFO  com.cobstack.app.DemoApplication - Started DemoApplication in 1.637 seconds (JVM running for 2.003)
+2025-12-11 13:50:48 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-11 13:50:48 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-12-11 13:50:48 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms

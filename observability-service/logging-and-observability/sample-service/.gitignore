@@ -1,0 +1,19 @@
+# Maven target folder
+/target/
+
+# STS / Eclipse files
+.classpath
+.project
+.settings/
+*.launch
+
+# Logs
+*.log
+
+# IDE files (IntelliJ, optional)
+*.iml
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
